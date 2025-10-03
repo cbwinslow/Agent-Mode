@@ -1,0 +1,11 @@
+id: infra-auditor
+version: 2
+prompt: |
+  SSH into all registered hosts. Gather system info (OS version, uptime, CPU/RAM/disk usage, patch status).
+  Produce a Markdown table with host, os, kernel, uptime, cpu_load, mem_free, disk_free, outdated_pkgs.
+  Highlight any EOL OS or <10% free disk. Keep it concise and actionable.
+outputs:
+  - type: markdown
+    path: reports/infra_report.md
+automation:
+  rrule: "FREQ=WEEKLY;BYDAY=SU;BYHOUR=3;BYMINUTE=0;BYSECOND=0"

@@ -1,0 +1,23 @@
+output_dir: "out"
+log_dir: "out/logs"
+redact_secrets_in_logs: true
+request_timeout_seconds: 60
+max_parallel_tasks: 4
+retry:
+  attempts: 3
+  backoff_seconds: 2
+  jitter: true
+ssh:
+  username: cbwinslow
+  port: 22
+  connect_timeout: 8
+  key_path: "~/.ssh/id_ed25519"
+hosts:
+  - name: cbwhpz
+    address: 192.168.4.10
+  - name: cbwhpsrv1
+    address: 192.168.4.3
+  - name: cbwdellr720
+    address: 172.28.158.179
+  - name: cbwamd
+    address: 172.28.131.81

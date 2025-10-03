@@ -1,0 +1,10 @@
+id: port-mapper
+version: 2
+prompt: |
+  Scan each host for TCP/UDP open ports, map to services/processes, and detect conflicts.
+  Emit CSV with columns: host, proto, port, service, process, notes.
+outputs:
+  - type: csv
+    path: reports/port_map.csv
+automation:
+  rrule: "FREQ=DAILY;BYHOUR=4;BYMINUTE=0;BYSECOND=0"

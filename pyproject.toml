@@ -1,0 +1,22 @@
+[project]
+name = "agent-mode-starter"
+version = "0.2.0"
+description = "CBW Agent Mode starter library with runners + configs + dashboard + secrets mgmt"
+authors = [{name = "CBW", email = "blaine.winslow@gmail.com"}]
+readme = "README.md"
+requires-python = ">=3.10,<3.11"
+dependencies = [
+  "pyyaml>=6.0.1",
+  "paramiko>=3.4.0",
+  "python-nmap>=0.7.1",
+  "requests>=2.32.0",
+  "keyring>=25.3.0",
+  "fastapi>=0.111.0",
+  "uvicorn>=0.30.0",
+]
+
+[tool.uv]
+index-url = "https://pypi.org/simple"
+
+[tool.black]
+line-length = 100

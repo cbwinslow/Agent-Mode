@@ -1,0 +1,10 @@
+id: security-scout
+version: 2
+prompt: |
+  For each host, auto-detect package manager (apt/dnf/pacman), list upgradable packages, and annotate with OSV CVE IDs.
+  Summarize critical/high items and recommended actions.
+outputs:
+  - type: markdown
+    path: reports/cve_alerts.md
+automation:
+  rrule: "FREQ=DAILY;BYHOUR=2;BYMINUTE=0;BYSECOND=0"
